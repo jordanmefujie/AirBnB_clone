@@ -1,11 +1,15 @@
 0x00. AirBnB clone - The console
 
 
-This project is the first step towards building a full web application: the AirBnB clone.
+This project is the first step towards building
+a full web application: the AirBnB clone.
 
-The console or command interpreter create the data model and allows create, update, destroy, store and persist objects to a file (JSON file). This console will be a tool to validate this storage engine.
+The console or command interpreter create the data
+model and allows create, update, destroy, store and
+persist objects to a file(JSON file).
+This console will be a tool to validate this storage engine.
 
-## Table of Contents
+Table of Contents
 ---
 * Objetives
 * Requeriments
@@ -15,7 +19,7 @@ The console or command interpreter create the data model and allows create, upda
 * Development environment
 * Authors
 
-## Objectives
+Objectives
 ---
 * How to create a Python package
 * How to create a command interpreter in Python using the cmd module
@@ -28,62 +32,50 @@ The console or command interpreter create the data model and allows create, upda
 * What is **kwargs and how to use it
 * How to handle named arguments in a function
 
-## Requeriments 📋
+Requeriments 📋
 ---
-Airbnb was built and tested in Ubuntu 14.04 LTS via Vagrant in VirtualBox. Programming languaje python3
+Airbnb was built and tested in Ubuntu 14.04 LTS via
+Vagrant in VirtualBox. Programming languaje python3
 
-## Installation and execution 🔧
+Installation and execution 🔧
 ---
 * Clone the repository
-> $ git clone https://github.com/JoseR98/AirBnB_clone.git
 * Move in to the directory
 > $ cd AirBnB_clone
 * Execute the console file
-> /AirBnB_clone$ ./console.py
+> AirBnB_clone$ ./console.py
 
-
-## Console commands
+Console commands
 ---
 The commands available for this command interpreter are:
-
-| Name       | Description   |
-| ---------- | ------------- |
-|**create*| Creates a new instance of the class passed by argument.|
-|*show*| Prints the string representation of an instance.                                        |
-|**destroy*| Deletes an instance that was already created.                                           |
-|*all*| Prints string representation of all instances or of all instances of a specified class. |
-|**update*| Updates an instance attribute if exists otherwise create it.                            |
-|*help*| Show all commands or display information about a specific command.|
-|*quit*| Exit the console.|
-|*EOF*| Exit the console.|
+	Name/Description
+|**create*| Creates a new instance
+of the class passed by argument.
+|*show*| Prints the string representation of an instance.
+|**destroy*| Deletes an instance that was already created.
+|*all*| Prints string representation of
+all instances or of all instances of a specified classs.
+|**update*| Updates an instance attribute if exists otherwise create it.
+|*help*| Show all commands or display information about a specific command.
+|*quit*| Exit the console.
+|*EOF*| Exit the console.
 
 **create, destroy and update commands save changes into a JSON file.*
 
-### Commands usage:
+Commands usage
+*Command*/*Usage*
+|*create*/**create*** < class_name > (ctrl + d)
 
+Tests
 
-| *Command*  | *Usage* |
-| -------- | -------- |
-|*create*  | ***create*** <class_name>|
-|*show*    | ***show*** <class_name> <object_id> **;** <class_name>.***show***(<object_id>)()|
-|*destroy* | ***destroy*** <class_name> <object_id **;** <class_name>.***destroy***(<object_id>)()|
-| *all*    | **all** <class_name> **;** <class_name>.**all**()|
-| *update* | ***update*** <class_name> <object_id> <attribute name> "<attribute value>" **;** <class name>.***update***(<object_id>, <attribute name>, <attribute value>) **;** <class name>.***update***(<object_id>, <dictionary representation>)|
-| *help*   | ***help*** **;** ***help*** <command_name>|
-| *quit*   | ***quit*** |
-| *EOF*    | ***EOF*** **;** (ctrl + d)|
+Interactive Mode
 
-## Tests ⚙️
----
+Example 1: Using create, count and all commands
 
-### Interactive Mode ⌨️
-
-#### Example 1: Using create, count and all commands
-```
-solid@DESKTOP$ ./console.py
+$ ./console.py
 (hbnb) help
 
-Documented commands (type help <topic>):
+Documented commands (type help < topic >):
 ========================================
 EOF  help  quit
 
@@ -91,35 +83,30 @@ EOF  help  quit
 (hbnb) 
 (hbnb) quit
 $
-```
 
-#### Example 2: Using basic update with an Id and show command
+Example 2: Using basic update with an Id and show command
 
-```
 (hbnb) update BaseModel
-```
 
-#### Example 3: Using update with a dictionary
+Example 3: Using update with a dictionary
 
-```
 (hbnb) BaseModel.update
-```
-#### Example 4: Using destroy and count command
-```
+
+Example 4: Using destroy and count command
+
 (hbnb) BaseModel.destroy("99f01e9a-99c0-42af-8c10-c35cadee1d8f")
 (hbnb) all
 (hbnb) BaseModel.count()
 0
 (hbnb) quit
 solid@DESKTOP-6PPFSAT:~/H/AirBnB_clone$
-```
 
-### Non - Interactive Mode ⌨️
-```
+Non - Interactive Mode
+
 solid@DESKTOP-6PPFSAT:~/H/AirBnB_clone$ echo "help" | ./console.py
 (hbnb)
 
-Documented commands (type help <topic>):
+Documented commands (type help < topic >):
 ========================================
 EOF  help  quit
 (hbnb) 
@@ -130,17 +117,14 @@ $
 $ cat test_help | ./console.py
 (hbnb)
 
-Documented commands (type help <topic>):
+Documented commands (type help < topic >):
 ========================================
 EOF  help  quit
 (hbnb) 
 $
-```
-
-## Development environment 🛠️
+Development environment
 This project has been tested on Ubuntu 14.06.6 LTS
 
 * Programming languaje Python
 * The tests are carried out in virtualBox
 * Development environment manager vagrant
-* Style guidelines: PEP 8 (version 2.8)
